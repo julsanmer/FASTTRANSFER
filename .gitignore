@@ -1,0 +1,47 @@
+# Numerical results and temporary files
+output/
+tmp/
+
+# Papers and presentation material
+paperASR/
+paper_ASTRO/
+presentationASR/
+
+# Archived development code
+legacy_archive/
+
+# SPICE binary data
+kernels/*.bsp
+kernels/*.bc
+kernels/*.bpc
+kernels/*.tls
+
+# Python environments, caches, and test artifacts
+.venv*/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Editors and operating-system metadata
+.idea/
+.vscode/
+.DS_Store
+
+# Matplotlib
+.matplotlib/
+
+# LaTeX build products
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.nav
+*.out
+*.snm
+*.synctex.gz
+*.toc

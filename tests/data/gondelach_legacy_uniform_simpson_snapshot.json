@@ -1,0 +1,46 @@
+{
+  "schema": "gondelach-legacy-regression-v1",
+  "description": "Historical uniform-Simpson Gondelach formulation; data only",
+  "inputs": {
+    "departure_mjd2000": 10226.5,
+    "tof_days": 300.0,
+    "N": 1,
+    "n_quad": 51,
+    "basis": "CPowPow2PSinPCos-CPowPow2PSinPCos-Cos05PCos05PSin05P6Cos05P6Sin05",
+    "target": "1989ml",
+    "ephemeris": "kepler",
+    "free_coefficients": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "outputs": {
+    "delta_v_km_s": 984.4398279682329,
+    "fmax_m_s2": 0.062282420240283486,
+    "radial_coefficients": [
+      -1.67101275361455e-05,
+      0.006104951426881777,
+      -0.004871468112343167,
+      0.0,
+      0.0
+    ],
+    "transverse_coefficients": [
+      0.017491656473770104,
+      0.18001412430953143,
+      -0.18388221703494442,
+      0.0,
+      0.0
+    ],
+    "axial_coefficients": [
+      3.367643475638322e-07,
+      -0.00084773245049985,
+      -0.0011177756304635235,
+      0.0,
+      0.0
+    ]
+  }
+}
