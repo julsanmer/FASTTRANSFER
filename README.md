@@ -2,6 +2,22 @@
 
 FASTTRANSFER is currently trimmed to run the Gondelach vs cylindrical B-spline comparison scenario on 20-day departure/TOF grids. The optimizer modules are still retained in `optimizer/` in case they are needed again later.
 
+## Single-Transfer Notebook
+
+[`notebooks/simple_mars_trajectory_examples.ipynb`](notebooks/simple_mars_trajectory_examples.ipynb)
+solves one fixed Earth-to-Mars transfer with no departure-date or transfer-time
+grid. It runs the high-order Gondelach hodographic method and a 10-control-point
+quintic cylindrical B-spline, then plots the trajectory and thrust-control
+history for both methods.
+
+The notebook uses the built-in Keplerian ephemeris so it works without the
+external SPICE binary kernels:
+
+```bash
+python -m pip install -r requirements-notebook.txt
+jupyter lab notebooks/simple_mars_trajectory_examples.ipynb
+```
+
 ## Active Scenario
 
 Run the four kept comparison cases:
