@@ -2,7 +2,9 @@
 
 ## Current Scope
 
-The active runnable workflow is the 20-day `compare_gondelach` study for Mars, Tempel 1, 1989 ML, and Mercury. Optimizer modules remain in `optimizer/` for later use, but their standalone scripts are not part of the current runnable surface.
+The active runnable workflow is the Gondelach vs cylindrical B-spline study for
+Mars, Tempel 1, 1989 ML, and Mercury. The public optimizer directory contains
+only modules used by this paper-facing workflow.
 
 ## Dependency Map
 
@@ -14,6 +16,7 @@ flowchart TD
     cyl["experiments/reproduce_gondelach_fig2_bspline_cylindrical.py"]
     bspline["optimizer/optimization_Bspline_freetf.py"]
     helpers["optimizer/helpers_Bspline.py"]
+    oneill["optimizer/oneill_nelder_mead.py"]
     units["optimizer/canonical_units.py"]
     orbit["optimizer/orbit_utils.py"]
     utils["utils/utils.py"]
@@ -22,6 +25,7 @@ flowchart TD
     compare --> fig2
     compare --> fig3
     compare --> cyl
+    fig3 --> oneill
     cyl --> bspline
     cyl --> units
     cyl --> utils
@@ -62,6 +66,17 @@ Only these generated comparison folders are retained:
 - `output/compare_gondelach_1989ml_bspline10_dep20d_tof20d/`
 - `output/compare_gondelach_mercury_bspline10_dep20d_tof20d/`
 
-## Retained Optimizer Library
+## Optimizer Scope
 
-The direct/indirect optimizer modules are intentionally retained under `optimizer/` so they can be wired back into runnable scripts later without reconstructing the solver code.
+The tracked optimizer modules are:
+
+- `canonical_units.py`
+- `helpers_Bspline.py`
+- `oneill_nelder_mead.py`
+- `optimization_Bspline_freetf.py`
+- `orbit_utils.py`
+- `targets.py`
+
+Exploratory Radau, indirect, and standalone Gondelach optimizer prototypes are
+kept locally but ignored by Git because they are not used by the paper
+experiments.

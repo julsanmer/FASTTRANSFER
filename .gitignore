@@ -10,6 +10,13 @@ presentationASR/
 # Archived development code
 legacy_archive/
 
+# Local exploratory optimizers outside the paper workflow
+optimizer/optimization_Gondelach_hodographic.py
+optimizer/optimization_MEE_*.py
+optimizer/optimization_cartesian_indirect_solve_bvp_jac.py
+optimizer/optimization_cylindrical_Radaucollocation.py
+experiments/run_cylindrical_radau_bspline_seed_benchmark.py
+
 # SPICE binary data
 kernels/*.bsp
 kernels/*.bc

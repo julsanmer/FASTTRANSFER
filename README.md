@@ -1,6 +1,8 @@
 # FASTTRANSFER
 
-FASTTRANSFER is currently trimmed to run the Gondelach vs cylindrical B-spline comparison scenario on 20-day departure/TOF grids. The optimizer modules are still retained in `optimizer/` in case they are needed again later.
+FASTTRANSFER contains the Gondelach vs cylindrical B-spline comparison workflow
+used by the paper, including grid campaigns, saved-solution postprocessing, and
+single-transfer examples.
 
 ## Single-Transfer Notebook
 
@@ -82,10 +84,12 @@ FASTTRANSFER/
 ├── optimizer/
 │   ├── canonical_units.py
 │   ├── helpers_Bspline.py
+│   ├── oneill_nelder_mead.py
 │   ├── optimization_Bspline_freetf.py
-│   ├── optimization_*.py
 │   ├── orbit_utils.py
 │   └── targets.py
+├── notebooks/
+│   └── simple_mars_trajectory_examples.ipynb
 ├── utils/
 └── output/
 ```
@@ -98,6 +102,9 @@ pip install -r requirements.txt
 
 Core runtime dependencies are NumPy, SciPy, CasADi, and Matplotlib.
 
-## Retained Optimizers
+## Optimizer Scope
 
-The direct and indirect optimizer modules remain under `optimizer/`, but their root-level runnable scripts and generated result folders were cleared while this workspace is focused on the 20-day comparison scenario.
+The public `optimizer/` directory contains only the cylindrical B-spline
+implementation and the supporting units, orbit, target, and O'Neill
+Nelder-Mead modules used by the paper experiments. Exploratory Radau and
+indirect optimizers are not part of the public repository.
