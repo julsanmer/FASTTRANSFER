@@ -12,6 +12,11 @@ grid. It runs the high-order Gondelach hodographic method and a 10-control-point
 quintic cylindrical B-spline, then plots the trajectory and thrust-control
 history for both methods.
 
+[`notebooks/mercury_quick_porkchop.ipynb`](notebooks/mercury_quick_porkchop.ipynb)
+provides a fast Mercury porkchop demonstration. It evaluates a deliberately
+coarse `10 x 10` departure/TOF grid over one Earth-Mercury synodic period and
+compares the high-order hodographic and quintic B-spline solutions.
+
 The notebook uses the built-in Keplerian ephemeris so it works without the
 external SPICE binary kernels:
 
@@ -89,6 +94,7 @@ FASTTRANSFER/
 │   ├── orbit_utils.py
 │   └── targets.py
 ├── notebooks/
+│   ├── mercury_quick_porkchop.ipynb
 │   └── simple_mars_trajectory_examples.ipynb
 ├── utils/
 └── output/
