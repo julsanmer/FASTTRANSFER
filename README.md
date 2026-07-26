@@ -1,8 +1,11 @@
 # FASTTRANSFER
 
 FASTTRANSFER contains the Gondelach vs cylindrical B-spline comparison workflow
-used by the paper, including grid campaigns, saved-solution postprocessing, and
-single-transfer examples.
+used for the paper *B-spline shaping for low-thrust interplanetary rendezvous*,
+including grid campaigns, saved-solution postprocessing, and single-transfer
+examples.
+
+![Graphical abstract for B-spline shaping for low-thrust interplanetary rendezvous](docs/graphical_abstract.png)
 
 ## Single-Transfer Notebook
 
@@ -112,5 +115,6 @@ Core runtime dependencies are NumPy, SciPy, CasADi, and Matplotlib.
 
 The public `optimizer/` directory contains only the cylindrical B-spline
 implementation and the supporting units, orbit, target, and O'Neill
-Nelder-Mead modules used by the paper experiments. Exploratory Radau and
-indirect optimizers are not part of the public repository.
+Nelder-Mead modules used for the experiments in *B-spline shaping for
+low-thrust interplanetary rendezvous*. Exploratory Radau and indirect
+optimizers are not part of the public repository.
